@@ -1,0 +1,35 @@
+{
+  "name": "react-usedynamicscript",
+  "version": "1.0.0",
+  "description": "React hook to dynamically import scripts",
+  "source": "src/index.ts",
+  "exports": "./dist/index.modern.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "mangle": {
+    "regex": "^_"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "script import",
+    "react hook"
+  ],
+  "author": "Alessio Franceschi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "microbundle": "^0.13.3",
+    "typescript": "^4.3.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
