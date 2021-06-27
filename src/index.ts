@@ -1,25 +1,19 @@
-import { useEffect } from 'react';
+export default function useDynamicScript(src: string, id?: string): removeScript {
+  let _script: HTMLScriptElement;
 
-export default function useDynamicScript(script: string, id?: string): void {
-  useEffect(() => {
-    let _script: HTMLScriptElement;
-    const _load = (_id: string, _url: string) => {
-      if (!document.getElementById(_id)) {
-        _script = document.createElement('script');
-        _script.type = 'text/javascript';
-        _script.src = _url;
-        _script.id = _id;
-        document.body.appendChild(_script);
-      }
-    };
+  if (!document.getElementById(id || src)) {
+    _script = document.createElement('script');
+    _script.type = 'text/javascript';
+    _script.src = src;
+    _script.id = id || src;
+    document.body.appendChild(_script);
+  }
 
-    _load(
-      id || script,
-      script,
-    );
+  function _removeScript(): void {
+    _script.parentElement?.removeChild(_script);
+  };
 
-    return () => {
-      _script.parentElement?.removeChild(_script);
-    };
-  }, []);
+  return _removeScript;
 }
+
+type removeScript = () => void

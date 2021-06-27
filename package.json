@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "test": "yarn build && cd test && yarn test"
   },
   "keywords": [
     "react",
@@ -23,13 +24,7 @@
   "author": "Alessio Franceschi",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.8",
     "microbundle": "^0.13.3",
     "typescript": "^4.3.4"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
   }
 }
