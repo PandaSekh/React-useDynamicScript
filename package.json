@@ -19,7 +19,9 @@
     "react",
     "hook",
     "script import",
-    "react hook"
+    "react hook",
+    "dynamic import",
+    "script import"
   ],
   "author": "Alessio Franceschi",
   "license": "MIT",
