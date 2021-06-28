@@ -13,7 +13,7 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "yarn build && cd test && yarn test"
+    "test": "cd test && yarn test"
   },
   "keywords": [
     "react",
