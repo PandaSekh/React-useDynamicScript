@@ -1,6 +1,6 @@
 {
   "name": "usedynamicscript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook to dynamically import scripts",
   "source": "src/index.ts",
   "exports": "./dist/index.modern.js",
@@ -13,7 +13,7 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "cd test && yarn test"
+    "test": "yarn build && cd test && yarn test"
   },
   "keywords": [
     "react",
