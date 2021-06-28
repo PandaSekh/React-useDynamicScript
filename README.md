@@ -10,7 +10,7 @@
 </p>
 <p align="center">⚡ Dynamically import and remove script files in your React components.</p>
 
-useDynamicScript is a *lightweight* (**<1Kb**) custom React Hook that can be used to dynamically import - and remove - JavaScript files.
+useDynamicScript is a *lightweight* (**<1Kb**) custom React Hook that can be used to dynamically import (and remove) JavaScript files.
 
 * * *
 
@@ -18,12 +18,12 @@ useDynamicScript is a *lightweight* (**<1Kb**) custom React Hook that can be use
 
 npm: 
 ```bash
-npm install --save lepre
+npm install --save usedynamicscript
 ```
 
 Yarn:
 ```bash
-yarn add lepre
+yarn add usedynamicscript
 ```
 
 ## Example
@@ -32,7 +32,7 @@ import useDynamicScript from "usedynamicscript";
 import {useEffect} from "react";
 
 function MyComponent(){
-  const [insert, remove] = useDynamicScript("https://localhost/myscript.js");
+  const [insert, remove] = useDynamicScript("https://localhost/myscript.js", "scriptId");
 
   useEffect(() => {
     insert();
