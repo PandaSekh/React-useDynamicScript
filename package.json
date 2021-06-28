@@ -1,5 +1,5 @@
 {
-  "name": "react-usedynamicscript",
+  "name": "usedynamicscript",
   "version": "1.0.1",
   "description": "React hook to dynamically import scripts",
   "source": "src/index.ts",
