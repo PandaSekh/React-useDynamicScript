@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: 14
       - run: yarn install
+      - run: cd test && yarn install && cd ..
       - run: yarn test
 
   publish-npm:
