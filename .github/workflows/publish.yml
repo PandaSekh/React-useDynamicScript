@@ -14,6 +14,7 @@ jobs:
           node-version: 14
       - run: yarn install
       - run: cd test && yarn install && cd ..
+      - run: yarn build
       - run: yarn test
 
   publish-npm:
@@ -26,23 +27,7 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: yarn install
+      - run: yarn build
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-          registry-url: https://npm.pkg.github.com/
-      - run: yarn install
-      - run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GIT_TOKEN}}
