@@ -17,12 +17,14 @@ describe("Hook test", () => {
 import useDynamicScript from "../dist/index"
 
 function Element() {
-  useDynamicScript("myscript.js", "myscript");
+  const [insert] = useDynamicScript("myscript.js", "myscript");
+  insert();
   return <div></div>
 }
 
 function OtherElement() {
-  const removeScript = useDynamicScript("otherscript.js", "otherscript");
-  removeScript();
+  const [insert, remove] = useDynamicScript("otherscript.js", "otherscript");
+  insert();
+  remove();
   return <div></div>
 }
