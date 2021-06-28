@@ -1,6 +1,6 @@
 {
   "name": "usedynamicscript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook to dynamically import scripts",
   "source": "src/index.ts",
   "exports": "./dist/index.modern.js",
